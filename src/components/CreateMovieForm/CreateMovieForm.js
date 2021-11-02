@@ -19,7 +19,8 @@ const CreateMovieForm = ( { addNewMovie }) => {
             description, 
             imageUrl:url,
             year:2020,
-            rating:0
+            rating:0,
+            isDeletable: true,
         }
 
         resetErrorMessages();

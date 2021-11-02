@@ -12,6 +12,11 @@ const Movies = () => {
     setMovies([...movies,movie])
   }
 
+  const deleteMovie = (movieId) =>{
+    let filteredMovies= movies.filter((movie)=> movie.id !== movieId)
+    setMovies(filteredMovies)
+  }
+
   useEffect(() => {
     setMovies(MovieService.getMovies());
   }, []);
@@ -20,7 +25,9 @@ const Movies = () => {
     <div className="container-fluid" style={{ marginLeft: '-15px' }}>
       <div className="d-flex flex-row">
         <div className="col-sm-12">
-          <MovieList movies={movies} />
+          <MovieList 
+                  movies={movies}
+                  deleteMovie={deleteMovie} />
         </div>
       </div>
       <div className="d-flex flex-row">
