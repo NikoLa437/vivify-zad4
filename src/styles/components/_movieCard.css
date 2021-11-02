@@ -12,3 +12,6 @@
 .card-footer-badge {
     font-size: 1rem;
 }
+
+.tooltip { display: none; }
+.tooltip-on-hover:hover + .tooltip { display: block }

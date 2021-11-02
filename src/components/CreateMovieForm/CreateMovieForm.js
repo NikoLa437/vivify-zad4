@@ -21,6 +21,8 @@ const CreateMovieForm = ( { addNewMovie }) => {
             year:2020,
             rating:0,
             isDeletable: true,
+            isRated: false,
+            ratedBy: []
         }
 
         resetErrorMessages();
